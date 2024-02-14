@@ -53,6 +53,15 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
     display: block;
 }
 
+label {
+    font-size: 0.875rem;
+    color: #454A4D;
+}
+.input-wrap {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
 input {
     color : #0D0D0D;
     border-radius: 0.5rem;
@@ -62,6 +71,11 @@ input {
     font-style: normal;
     font-weight: 400;
     line-height: 1.25rem;
+}
+
+input:disabled{
+    background-color: #F9F9F9;
+    border: 0;
 }
 
 input::placeholder {
@@ -149,7 +163,6 @@ main {
 }
 
 section {
-    height: 100%;
     background-color: #F9F9F9;
 }
 
@@ -161,8 +174,13 @@ section h2 {
     font-size: 1.0625rem;
     font-weight: 500;
 }
-
-.my_work div {
+main {
+    display: flex;
+}
+.my-work {
+    flex: auto;
+}
+.my-work div {
     display: flex;
     flex-direction: column;
     padding: 1rem;
@@ -170,13 +188,13 @@ section h2 {
     justify-content: space-between;
     align-items: flex-end;
 }
-.my_work div ul {
+.my-work div ul {
     display: flex;
     flex-direction: column;
     align-self: stretch;
     gap: 0.625rem;
 }
-.my_work ul li a{
+.my-work ul li a{
     display: flex;
     flex-direction: column;
     padding: 1.25rem 0.625rem;
@@ -186,7 +204,7 @@ section h2 {
     border-radius: 0.875rem;
     color: var(--bk2);
 }
-.my_work ul li p {
+.my-work ul li p {
     display: -webkit-box;
     -webkit-line-clamp: 1;
     -webkit-box-orient: vertical;
@@ -194,24 +212,24 @@ section h2 {
     text-overflow: ellipsis;
 }
 
-.my_work ul li .title {
+.my-work ul li .title {
     font-size: 1.1875rem;
     font-weight: 400;
     line-height: 1.25rem;
 }
 
-.my_work ul li .desc {
+.my-work ul li .desc {
     font-size: 0.8125rem;
     font-weight: 400;
     line-height: 1.25rem;
 }
 
-.my_work span {
+.my-work span {
     display: block;
     padding-top: 1rem;
 }
 
-.my_work span a {
+.my-work span a {
     font-size: 0.875rem;
     font-style: normal;
     font-weight: 400;
@@ -220,7 +238,7 @@ section h2 {
     color: #6F7980;
 }
 
-.top_menu {
+.top-menu {
     position: absolute;
     top: 0.81rem;
     right: 0.87rem;
@@ -228,7 +246,7 @@ section h2 {
     background-color: #fff;
     box-shadow: 0 2px 5px 2px rgba(0, 0, 0, 0.12);
 }
-.top_menu ul {
+.top-menu ul {
     display: inline-flex;
     padding: 1.13rem 1.56rem;
     flex-direction: column;
@@ -236,7 +254,7 @@ section h2 {
     gap: 1.25rem;
 }
 
-.top_menu ul li {
+.top-menu ul li {
     font-size: 0.94rem;
     font-style: normal;
     font-weight: 400;
@@ -453,8 +471,11 @@ footer p {
     display: flex;
     flex-direction: column;
     flex: auto;
-    gap: 0.625rem;
     overflow-y: auto;
+}
+
+.contents.detail {
+    gap: 0.625rem;
 }
 
 .detail-info {
@@ -636,3 +657,27 @@ section.detail-info h2 {
     background: #fff;
     box-shadow: 0 2px 5px 2px rgba(0, 0, 0, 0.19);
 }
+
+.my-info {
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    padding: 1rem var(--padding);
+    gap: 0.625rem;
+    color: #454A4D;
+}
+
+.my-info > div {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem
+}
+
+.my-info ul {
+    display: flex;
+    flex-direction: column;
+    gap: 0.625rem;
+}
+
+
+
