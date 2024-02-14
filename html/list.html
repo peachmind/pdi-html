@@ -6,6 +6,10 @@
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/assets/css/front/main.css">
     <title>pdi</title>
+    <script
+            src="https://code.jquery.com/jquery-3.7.1.slim.min.js"
+            integrity="sha256-kmHvs0B+OpCW5GVHUNjv9rOmY0IvSIRcf7zGUDTDQM8="
+            crossorigin="anonymous"></script> <!-- 개발에서 쓰는거 쓰면됨 -->
 </head>
 <body>
 <div class="container">
@@ -14,7 +18,7 @@
         <div class="logo"><h1>내 작업</h1></div>
         <div class="right"><button class="header-search"></button></div> <!--2024.02.14 수정-->
     </header>
-    <section class="list">
+    <section class="list top"><!--2024.02.14 수정-->
         <ul>
             <li>
                 <a href="#">
@@ -146,6 +150,16 @@
         </ul>
     </nav>
 </div>
-
+<aside class="hidden"><span class="i-top" onclick="$('.top')[0].scrollTo(0,0)"></span></aside> <!--2024.02.14 수정-->
+<script>
+    $(document).ready(function(){
+        $(".top").scroll(function(){
+            $("aside").removeClass("hidden");
+            if($(this).scrollTop() < 1) {
+                $("aside").addClass("hidden");
+            }
+        })
+    });
+</script>
 </body>
 </html>

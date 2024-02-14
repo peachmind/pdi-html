@@ -649,7 +649,7 @@ section.detail-info h2 {
 }
 
 
-.detail-info .wrap .work-menu.hidden {
+.hidden {
    display: none;
 }
 
@@ -693,10 +693,16 @@ section.detail-info h2 {
     justify-content: center; !important;
     background-color: #F9F9F9;
 }
-.empty::before{
+.empty::before {
     content: url("/assets/images/front/alert-circle.svg");
-
 }
 
-
+aside {
+    position: fixed;
+    bottom: 8.25rem;
+    right: 1.5rem;
+}
+.i-top {
+    content: url("/assets/images/front/top.svg");
+}
 
