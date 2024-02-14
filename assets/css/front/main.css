@@ -178,6 +178,8 @@ main {
     display: flex;
 }
 .my-work {
+    display: flex;
+    flex-direction: column;
     flex: auto;
 }
 .my-work div {
@@ -263,7 +265,8 @@ main {
 
 footer {
     display: flex;
-    padding: 1.875rem 0.625rem;
+    height: 9rem;
+    padding: 0 0.625rem;
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -302,6 +305,8 @@ footer p {
     background-color: #fff;
     flex: auto;
     overflow-y: auto;
+    display: flex;
+    flex-direction: column;
 }
 .list ul {
     display: flex;
@@ -440,7 +445,7 @@ footer p {
     display: block;
 }
 
-.i-home.active::before{
+.active .i-home::before{
     background: url('/assets/images/front/tab-icon.png') -55px -54px;
  }
 
@@ -458,11 +463,11 @@ footer p {
 .i-my::before{
     content: '';
     width: 25px; height: 24px;
-    background: url('/assets/images/front/tab-icon.png') -10px -10px;
+    background: url('/assets/images/front/tab-icon.png') -10px -54px;
     display: block;
 }
 
-.active  .my::before{
+.active .i-my::before{
     background: url('/assets/images/front/tab-icon.png') -100px -54px;
 }
 
@@ -677,6 +682,20 @@ section.detail-info h2 {
     display: flex;
     flex-direction: column;
     gap: 0.625rem;
+}
+
+.empty {
+    display: flex;
+    flex: auto;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center; !important;
+    justify-content: center; !important;
+    background-color: #F9F9F9;
+}
+.empty::before{
+    content: url("/assets/images/front/alert-circle.svg");
+
 }
 
 
