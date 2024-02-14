@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/assets/css/front/main.css">
+    <title>pdi</title>
+</head>
+<body>
+<div class="container">
+    <header>
+        <div class="left"><a><span class="header-left"></span></a></div><!--2024.02.14 수정-->
+        <div class="logo"><h1>내 작업</h1></div>
+        <div class="right"></div>
+    </header>
+    <div class="contents">
+        <section class="detail-info">
+            <h2>차량정보</h2>
+            <ul>
+                <li>
+                    <div class="wrap">
+                        <p class="title">모델명<span>:</span></p>
+                        <p class="desc">캐스퍼 가솔린 1.0 터보 디 에센셜</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="wrap">
+                        <p class="title">고객사<span>:</span></p>
+                        <p class="desc">모빌러그 렌터카</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="wrap">
+                        <p class="title">출하일<span>:</span></p>
+                        <p class="desc">2023.10.20 </p>
+                    </div>
+                </li>
+            </ul>
+        </section>
+        <section class="detail-info">
+            <h2>실행사 정보</h2>
+            <ul>
+                <li>
+                    <div class="wrap">
+                        <p class="title">실행사<span>:</span></p>
+                        <p class="desc">주식회사 모빌러그</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="wrap">
+                        <p class="title">작업자<span>:</span></p>
+                        <p class="desc">한광수</p>
+                    </div>
+                </li>
+            </ul>
+        </section>
+
+        <section class="detail-info last">
+            <h2>작업현황</h2>
+            <ul class="work-flow">
+                <li class="step1"><p>출고신청</p></li>
+                <li class="step2 active"><p>1차탁송</p></li>
+                <li class="step3"><p>작업진행</p></li>
+                <li class="step4"><p>2차탁송</p></li>
+                <li class="step5"><p>출고완료</p></li>
+            </ul>
+            <ul class="work-status">
+                <li>
+                    <div class="wrap">
+                        <p class="title">블랙박스</p>
+                        <div class="wrap-btn">
+                            <span class="btn status working">작업중</span>
+                            <button class="sm-more"></button>
+                        </div>
+                        <div class="work-menu">
+                            <button>작업완료</button>
+                        </div>
+                    </div>
+                 </li>
+                <li>
+                    <div class="wrap">
+                        <p class="title">썬팅</p>
+                        <div class="wrap-btn">
+                            <span class="btn status working">작업중</span>
+                            <button class="sm-more"></button>
+                        </div>
+                        <div class="work-menu hidden">
+                            <button>작업완료</button>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="wrap">
+                        <p class="title">GPS&OBD</p>
+                        <div class="wrap-btn none"> <!-- 작업완료 버튼이 상고 상태값만 보일때 none-->
+                            <span class="btn status done">작업완료</span>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </section>
+    </div>
+    <nav class="bottom-tab">
+        <ul>
+            <li><a href="#"><p class="i-home">Home</p></a></li>
+            <li class="active"><a href="#"><p class="i-work">내 작업</p></a></li>
+            <li><a href="#"><p class="i-my">내 정보</p></a></li>
+        </ul>
+    </nav>
+</div>
+
+</body>
+</html>
