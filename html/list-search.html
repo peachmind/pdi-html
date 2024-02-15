@@ -19,7 +19,7 @@
     <section class="list top"><!--2024.02.14 수정-->
         <ul>
             <li>
-                <a href="detail.html">
+                <a href="#">
                     <div class="wrap">
                         <p class="title">요청업체정보요청업체정보요청업체정보요청업체정보</p>
                         <span class="btn status step1">작업요청</span><!--2024.02.14 수정-->
@@ -31,7 +31,7 @@
                 </a>
             </li>
             <li>
-                <a href="detail.html">
+                <a href="#">
                     <div class="wrap">
                         <p class="title">요청업체정보요청업체정보요청업체정보요청업체정보</p>
                         <span class="btn status step2">1차탁송</span><!--2024.02.14 수정-->
@@ -43,7 +43,7 @@
                 </a>
             </li>
             <li>
-                <a href="detail.html">
+                <a href="#">
                     <div class="wrap">
                         <p class="title">요청업체정보요청업체정보요청업체정보요청업체정보</p>
                         <span class="btn status step2">1차탁송</span><!--2024.02.14 수정-->
@@ -55,7 +55,7 @@
                 </a>
             </li>
             <li>
-                <a href="detail.html">
+                <a href="#">
                     <div class="wrap">
                         <p class="title">요청업체정보요청업체정보요청업체정보요청업체정보</p>
                         <span class="btn status step3">작업진행</span><!--2024.02.14 수정-->
@@ -67,7 +67,7 @@
                 </a>
             </li>
             <li>
-                <a href="detail.html">
+                <a href="#">
                     <div class="wrap">
                         <p class="title">요청업체정보요청업체정보요청업체정보요청업체정보</p>
                         <span class="btn status step4">2차탁송</span><!--2024.02.14 수정-->
@@ -79,7 +79,7 @@
                 </a>
             </li>
             <li>
-                <a href="detail.html">
+                <a href="#">
                     <div class="wrap">
                         <p class="title">요청업체정보요청업체정보요청업체정보요청업체정보</p>
                         <span class="btn status step5">출고완료</span><!--2024.02.14 수정-->
@@ -91,7 +91,7 @@
                 </a>
             </li>
             <li>
-                <a href="detail.html">
+                <a href="#">
                     <div class="wrap">
                         <p class="title">요청업체정보요청업체정보요청업체정보요청업체정보</p>
                         <span class="btn status step1">작업요청</span><!--2024.02.14 수정-->
@@ -103,7 +103,7 @@
                 </a>
             </li>
             <li>
-                <a href="detail.html">
+                <a href="#">
                     <div class="wrap">
                         <p class="title">요청업체정보요청업체정보요청업체정보요청업체정보</p>
                         <span class="btn status step1">작업요청</span><!--2024.02.14 수정-->
@@ -115,7 +115,7 @@
                 </a>
             </li>
             <li>
-                <a href="detail.html">
+                <a href="#">
                     <div class="wrap">
                         <p class="title">요청업체정보요청업체정보요청업체정보요청업체정보</p>
                         <span class="btn status step1">작업요청</span><!--2024.02.14 수정-->
@@ -127,7 +127,7 @@
                 </a>
             </li>
             <li>
-                <a href="detail.html">
+                <a href="#">
                     <div class="wrap">
                         <p class="title">요청업체정보요청업체정보요청업체정보요청업체정보</p>
                         <span class="btn status step1">작업요청</span><!--2024.02.14 수정-->
@@ -142,13 +142,41 @@
     </section>
     <nav class="bottom-tab">
         <ul>
-            <li><a href="index.html"><p class="i-home">Home</p></a></li>
-            <li class="active"><a href="list.html"><p class="i-work">내 작업</p></a></li>
-            <li><a href="my-info.html"><p class="i-my">내 정보</p></a></li>
+            <li><a href="#"><p class="i-home">Home</p></a></li>
+            <li class="active"><a href="#"><p class="i-work">내 작업</p></a></li>
+            <li><a href="#"><p class="i-my">내 정보</p></a></li>
         </ul>
     </nav>
 </div>
 <aside class="hidden"><span class="i-top" onclick="$('.top')[0].scrollTo(0,0)"></span></aside> <!--2024.02.14 수정-->
+<div class="full-modal">
+    <header>
+        <div class="close"><button class="header-close"></button></div><!--2024.02.14 수정-->
+    </header>
+    <div class="search">
+        <div class="input-wrap">
+            <label for="keyword">검색단어</label>
+            <input id="keyword" value="hmstea"/>
+        </div>
+        <div class="input-wrap">
+            <label for="startDate">시작일자</label>
+            <input id="startDate" readonly/>
+            <span class="i-calendar"></span>
+        </div>
+        <div class="input-wrap">
+            <label for="endDate">종료일자</label>
+            <input id="endDate" readonly/>
+            <span class="i-calendar"></span>
+        </div>
+        <div class="input-wrap">
+            <label for="status">시작일자</label>
+            <select id="status">
+                <option value="">전체</option>
+                <option value="1">1차탁송</option>
+            </select>
+        </div>
+    </div>
+</div>
 <script>
     $(document).ready(function(){
         $(".top").scroll(function(){

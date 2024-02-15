@@ -73,6 +73,17 @@ input {
     line-height: 1.25rem;
 }
 
+select {
+    color : #6F7980;
+    border: 0;
+    padding: 1rem;
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.25rem;
+}
+
+
 input:disabled{
     background-color: #F9F9F9;
     border: 0;
@@ -101,25 +112,25 @@ header {
 .header-menu {
     display: block;
     width: 24px; height: 24px;
-    background: url('/assets/images/front/header-menu.svg');
+    background: url('../../images/front/header-menu.svg');
 }
 
 .header-search {
     display: block;
     width: 24px; height: 24px;
-    background: url('/assets/images/front/search.svg');
+    background: url('../../images/front/search.svg');
 }
 
 .header-close {
     display: block;
     width: 24px; height: 24px;
-    background: url('/assets/images/front/close.svg');
+    background: url('../../images/front/close.svg');
 }
 
 .header-left {
     display: block;
     width: 24px; height: 24px;
-    background: url('/assets/images/front/left-arrow.svg');
+    background: url('../../images/front/left-arrow.svg');
 }
 
 header .left {
@@ -138,12 +149,16 @@ header .logo {
 
 header .right {
     width: 2.5rem;
-    text-align: center;
+    display: flex;
+    justify-content: center;
 }
 
 header .close {
-    width: 100%;
-    text-align: right;
+    width: 2.5rem; height: 2.5rem;
+    display: flex;
+    margin-left: auto;
+    justify-content: center;
+    align-items: center;
 }
 
 header .logo h1 {
@@ -283,8 +298,8 @@ footer p {
 
 .login {
     display: flex;
+    width: 100%;
     flex-direction: column;
-    align-self: stretch;
     padding: 5.8rem var(--padding) 0;
     gap: 1.5rem;
 }
@@ -441,34 +456,34 @@ footer p {
 .i-home::before{
     content: '';
     width: 25px; height: 24px;
-    background: url('/assets/images/front/tab-icon.png') -55px -10px;
+    background: url('../../images/front/tab-icon.png') -55px -10px;
     display: block;
 }
 
 .active .i-home::before{
-    background: url('/assets/images/front/tab-icon.png') -55px -54px;
+    background: url('../../images/front/tab-icon.png') -55px -54px;
  }
 
 .i-work::before{
     content: '';
     width: 25px; height: 24px;
-    background: url('/assets/images/front/tab-icon.png') -10px -10px;
+    background: url('../../images/front/tab-icon.png') -10px -10px;
     display: block;
 }
 
 .active .i-work::before {
-    background: url('/assets/images/front/tab-icon.png') -100px -10px;
+    background: url('../../images/front/tab-icon.png') -100px -10px;
 }
 
 .i-my::before{
     content: '';
     width: 25px; height: 24px;
-    background: url('/assets/images/front/tab-icon.png') -10px -54px;
+    background: url('../../images/front/tab-icon.png') -10px -54px;
     display: block;
 }
 
 .active .i-my::before{
-    background: url('/assets/images/front/tab-icon.png') -100px -54px;
+    background: url('../../images/front/tab-icon.png') -100px -54px;
 }
 
 .contents {
@@ -561,58 +576,58 @@ section.detail-info h2 {
 .detail-info .work-flow li:not(:last-child)::after {
     content: '';
     width: 5px; height: 8px;
-    background: url('/assets/images/front/work-flow.png') -10px -110px;
+    background: url('../../images/front/work-flow.png') -10px -110px;
 }
 
 .detail-info .work-flow li.active:not(:last-child)::after {
-    background: url('/assets/images/front/work-flow.png') -35px -110px;
+    background: url('../../images/front/work-flow.png') -35px -110px;
 }
 
 .detail-info .work-flow li.step1 p::before,
 .detail-info .work-flow li.step5 p::before{
     content: '';
     width: 30px; height: 30px;
-    background: url('/assets/images/front/work-flow.png') -112px -10px;
+    background: url('../../images/front/work-flow.png') -112px -10px;
 }
 
 .detail-info .work-flow li.active.step1 p::before,
 .detail-info .work-flow li.active.step5 p::before{
     content: '';
     width: 30px; height: 30px;
-    background: url('/assets/images/front/work-flow.png') -60px -60px;
+    background: url('../../images/front/work-flow.png') -60px -60px;
 }
 
 .detail-info .work-flow li.step2 p::before,
 .detail-info .work-flow li.step4 p::before{
     content: '';
     width: 31px; height: 30px;
-    background: url('/assets/images/front/work-flow.png') -61px -10px;
+    background: url('../../images/front/work-flow.png') -61px -10px;
 }
 
 .detail-info .work-flow li.active.step2 p::before,
 .detail-info .work-flow li.active.step4 p::before{
     content: '';
     width: 31px; height: 30px;
-    background: url('/assets/images/front/work-flow.png') -112px -60px;
+    background: url('../../images/front/work-flow.png') -112px -60px;
 }
 
 .detail-info .work-flow li.step3 p::before {
     content: '';
     width: 31px; height: 30px;
-    background: url('/assets/images/front/work-flow.png') -10px -10px;
+    background: url('../../images/front/work-flow.png') -10px -10px;
 }
 
 .detail-info .work-flow li.active.step3 p::before {
     content: '';
     width: 31px; height: 30px;
-    background: url('/assets/images/front/work-flow.png') -10px -60px;
+    background: url('../../images/front/work-flow.png') -10px -60px;
 }
 
 
 .detail-info .work-flow li.active.step p::before {
     content: '';
     width: 31px; height: 30px;
-    background: url('/assets/images/front/work-flow.png') -10px -60px;
+    background: url('../../images/front/work-flow.png') -10px -60px;
 }
 
 .detail-info .work-status li .wrap{
@@ -637,7 +652,7 @@ section.detail-info h2 {
 .sm-more {
     display: block;
     width: 24px; height: 24px;
-    background: url('/assets/images/front/sm-more.svg');
+    background: url('../../images/front/sm-more.svg');
 }
 
 .detail-info .wrap .work-menu {
@@ -694,7 +709,7 @@ section.detail-info h2 {
     background-color: #F9F9F9;
 }
 .empty::before {
-    content: url("/assets/images/front/alert-circle.svg");
+    content: url("../../images/front/alert-circle.svg");
 }
 
 aside {
@@ -703,6 +718,42 @@ aside {
     right: 1.5rem;
 }
 .i-top {
-    content: url("/assets/images/front/top.svg");
+    content: url("../../images/front/top.svg");
 }
 
+.full-modal {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+}
+.search {
+    display: flex;
+    flex-direction: column;
+    background-color: #F9F9F9;
+    gap: 0.0625rem;
+    padding: 0.0625rem 0;
+}
+
+.search .input-wrap {
+    padding: 0 var(--padding);
+    background-color: #fff;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.search label {
+    color: #6F7980;
+}
+
+.search input {
+    border: 0;
+    flex: auto;
+    padding: 0.94rem 1rem;
+}
+
+.i-calendar {
+    content: url("../../images/front/calendar.svg");
+}
