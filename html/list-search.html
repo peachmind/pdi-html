@@ -4,8 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/assets/css/front/jquery-ui.min.css">
     <link rel="stylesheet" href="/assets/css/front/main.css">
     <script src="/assets/js/front/jquery.js"></script> <!-- 개발에서 쓰는거 쓰면됨 -->
+    <script src="/assets/js/front/jquery-ui.min.js"></script>
     <script src="/assets/js/front/common.js"></script>
     <title>pdi</title>
 </head>
@@ -163,13 +165,19 @@
             </div>
             <div class="input-wrap">
                 <label for="startDate">시작일자</label>
-                <input id="startDate" readonly value="2024.01.01"/>
-                <span class="i-calendar"></span>
+                <input id="startDate" class="search-date" readonly/>
+                <span class="i-calendar search-date"></span>
+            </div>
+            <div class="input-wrap calendar">
+                <div class="datepicker hidden" data-type="minDate"></div>
             </div>
             <div class="input-wrap">
                 <label for="endDate">종료일자</label>
-                <input id="endDate" readonly />
-                <span class="i-calendar"></span>
+                <input id="endDate" class="search-date" readonly />
+                <span class="i-calendar search-date"></span>
+            </div>
+            <div class="input-wrap calendar">
+                <div class="datepicker hidden" data-type="maxDate"></div>
             </div>
             <div class="input-wrap">
                 <label for="status">작업상태</label>
@@ -195,6 +203,56 @@
             $("aside").removeClass("hidden");
             if($(this).scrollTop() < 1) {
                 $("aside").addClass("hidden");
+            }
+        })
+
+        //datepicker
+        $.datepicker.setDefaults({
+            closeText: "닫기",
+            currentText: "오늘",
+            prevText: '이전 달',
+            nextText: '다음 달',
+            monthNames: ['1월', '2월', '3월', '4월', '5월', '6월', '7월', '8월', '9월', '10월', '11월', '12월'],
+            monthNamesShort: ['1월', '2월', '3월', '4월', '5월', '6월', '7월', '8월', '9월', '10월', '11월', '12월'],
+            dayNames: ['일', '월', '화', '수', '목', '금', '토'],
+            dayNamesShort: ['일', '월', '화', '수', '목', '금', '토'],
+            dayNamesMin: ['일', '월', '화', '수', '목', '금', '토'],
+            weekHeader: "주",
+            yearSuffix: "년",
+            dateFormat: "yy.mm.dd",
+            showMonthAfterYear: true,
+        });
+
+        $(".datepicker").datepicker({
+            onSelect: function(arg){
+                //오늘 미선택시 하이라이트 표기 없애기 위해서 필요함
+                $(this).data("selected",arg);
+                $(this).parent().prev().children("input").val(arg);
+                const type = $(this).data("type");
+                const that = this;
+
+                $(".datepicker").each(function(a,b){
+                    if(that !== this) {
+                        $(this).datepicker("option",type, arg)
+                    }
+                });
+
+                $(this).addClass("hidden");
+            },
+            onUpdateDatepicker: function (){
+                //오늘 미선택시 하이라이트 표기 없애기 위해서 필요함
+                if($(this).val() !== $(this).data("selected")) {
+                    $(".ui-state-highlight").removeClass("ui-state-active")
+                }
+            }
+        });
+
+        $(".search-date").click(function(){
+            const $datepicker = $(this).parent().next().children(".datepicker");
+            if($datepicker.hasClass("hidden")) {
+                $datepicker.removeClass("hidden");
+            } else {
+                $datepicker.toggle();
             }
         })
 
