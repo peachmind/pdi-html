@@ -176,8 +176,7 @@ header .logo h1 {
     flex-direction: column;
     height: 100%;
 }
-main {
-
+main, main form {
     flex: auto;
 }
 
@@ -945,7 +944,7 @@ aside {
 
 }
 
-.ui-datepicker td a{
+.ui-datepicker td a, .ui-datepicker td span{
     padding: 0.5rem;
     height: 2.5rem;
     width: 2.5rem;
@@ -995,14 +994,4 @@ aside {
     font-weight: 400;
     font-size: 1.125rem;
     line-height: 150%;
-}
-
-.ui-datepicker td span {
-    padding: 0.5rem;
-    height: 2.5rem;
-    width: 2.5rem;
-    line-height: 1.2rem;
-    margin: 0 auto;
-    vertical-align: text-top;
-    text-align: center;
 }
