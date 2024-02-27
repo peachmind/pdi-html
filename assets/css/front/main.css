@@ -67,7 +67,7 @@ label {
     gap: 0.5rem;
     padding: 0 !important;
 }
-input {
+input:not([type=submit]) {
     color : #0D0D0D;
     border-radius: 0.5rem;
     border: 1px solid #D4D7D9;
@@ -274,7 +274,7 @@ main {
     gap: 1.25rem;
 }
 
-.top-menu ul li {
+.top-menu ul li, .top-menu ul li input {
     font-size: 0.94rem;
     font-style: normal;
     font-weight: 400;
