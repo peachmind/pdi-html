@@ -369,6 +369,7 @@ footer p {
 .list .title {
     font-size: 1.18rem;
     font-weight: 400;
+    width: calc(100% - 4.375rem);
     line-height: 1.25rem;
 }
 
@@ -636,11 +637,24 @@ section.detail-info h2 {
 
 .detail-info .work-status li .wrap{
     display: flex;
-    height: 3.75rem;
+    /*height: 3.75rem;*/
     padding: 0.625rem 0;
-    align-items: center;
+    align-items: flex-start;
     gap: 0.625rem;
     position: relative;
+}
+
+.detail-info .work-status .title{
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 0.25rem;
+    width: calc(100vw - 10rem);
+    flex-direction: column;
+}
+.detail-info .work-status .work-item {
+    font-size: 0.8rem;
+    word-break: break-all;
 }
 
 .detail-info .work-status li .wrap-btn {

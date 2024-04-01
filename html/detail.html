@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap"
+          rel="stylesheet">
     <link rel="stylesheet" href="/assets/css/front/main.css">
     <script src="/assets/js/front/jquery.js"></script> <!-- 개발에서 쓰는거 쓰면됨 -->
     <script src="/assets/js/front/common.js"></script>
@@ -70,7 +71,12 @@
             <ul class="work-status">
                 <li>
                     <div class="wrap">
-                        <p class="title">블랙박스</p>
+                        <p class="title">
+                            블랙박스
+                            <span class="work-item">
+                               뷰게라 - VG-806
+                           </span>
+                        </p>
                         <div class="wrap-btn">
                             <span class="btn status working">작업중</span>
                             <button class="sm-more"></button>
@@ -79,10 +85,15 @@
                             <button>작업완료</button>
                         </div>
                     </div>
-                 </li>
+
+                </li>
                 <li>
                     <div class="wrap">
-                        <p class="title">썬팅</p>
+                        <p class="title">썬팅
+                            <span class="work-item">
+                                루마루마루마 - 피터쿨 (전면 - 10%, 측면 - 15%) 피터쿨 (전면 - 10%, 측면 - 15%)
+                            </span>
+                        </p>
                         <div class="wrap-btn">
                             <span class="btn status working">작업중</span>
                             <button class="sm-more"></button>
@@ -94,7 +105,9 @@
                 </li>
                 <li>
                     <div class="wrap">
-                        <p class="title">GPS&OBD</p>
+                        <p class="title">GPS&OBD<span class="work-item">
+                                루마 - 피터쿨  (전면 - 10%, 측면 - 15%)
+                            </span></p>
                         <div class="wrap-btn none"> <!-- 작업완료 버튼이 상고 상태값만 보일때 none-->
                             <span class="btn status done">작업완료</span>
                         </div>
@@ -112,9 +125,9 @@
     </nav>
 </div>
 <script>
-    $(document).ready(function(){
-        $(".work-menu button").click(function(){
-            window.location.href="detail-upload.html"
+    $(document).ready(function () {
+        $(".work-menu button").click(function () {
+            window.location.href = "detail-upload.html"
         })
     })
 </script>
