@@ -1051,7 +1051,7 @@ button.blue{
     line-height: 1.25rem;
     padding: 0.625rem;
     border-radius: 0.5rem;
-    background: rgba(5, 84, 242, 0.80);
+    background: var(--main-color);
     color: #fff;
     font-weight: 500;
 }
